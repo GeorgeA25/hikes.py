@@ -1,0 +1,28 @@
+#map {
+    height: 600px;
+    width: 100%;
+}
+
+.rating {
+    direction: rtl; /* Right to left: higher rating stars first */
+    font-size: 2rem; /* Larger stars */
+    unicode-bidi: bidi-override; /* Ensure proper star stacking */
+}
+
+.rating input {
+    display: none; /* Hide the radio buttons */
+}
+
+.rating label {
+    color: #ccc; /* Default color for unselected stars */
+    cursor: pointer; /* Change cursor to indicate interactiveness */
+}
+
+.rating input:checked ~ label {
+    color: #f5b301; /* Color for selected stars */
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #f5b301; /* Color stars on hover */
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hiking Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <h1>My Hiking Map</h1>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+    <form id="filter-form">
+        <label for="rating">Select Minimum Star Rating:</label>
+        <select id="rating" name="rating">
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+        </select>
+    
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="moderate">Moderate</option>
+            <option value="hard">Hard</option>
+        </select>
+    
+        <button type="submit">Filter Hikes</button>
+    </form>
+    <div class="rating">
+        <input type="radio" id="star5" name="rating" value="5" />
+        <label for="star5" title="5 stars">&#9733;</label>
+    
+        <input type="radio" id="star4" name="rating" value="4" />
+        <label for="star4" title="4 stars">&#9733;</label>
+    
+        <input type="radio" id="star3" name="rating" value="3" />
+        <label for="star3" title="3 stars">&#9733;</label>
+    
+        <input type="radio" id="star2" name="rating" value="2" />
+        <label for="star2" title="2 stars">&#9733;</label>
+    
+        <input type="radio" id="star1" name="rating" value="1" />
+        <label for="star1" title="1 star">&#9733;</label>
+    </div>
+    <option value="" disabled selected>Select a rating</option>
+
+</body>
+</html>
